@@ -1,16 +1,16 @@
 #!/bin/bash
 
-DOWNLOAD_COMPLETED_FOLDER=/media/drbergie/0ac9ae61-c9cc-4151-9888-be26c02af604/space/downloads/_completed/
-VIDEO_ROOT=/media/drbergie/0ac9ae61-c9cc-4151-9888-be26c02af604/videos/
+DOWNLOAD_COMPLETED_FOLDER=/home/drbergie/Downloads/
+VIDEO_ROOT=/home/drbergie/Videos/Series/
 
 
 if [ "$1" = "DC" ]; then
-	cd $DOWNLOAD_COMPLETED_FOLDER/DC/
+	cd $DOWNLOAD_COMPLETED_FOLDER/DC_complete/
         MOVE_OR_COPY_ARGS=-uv
         MOVE_OR_COPY_ARGS_DIR=-uv
 	MOVE_OR_COPY_COMMAND=mv
 else
-	cd $DOWNLOAD_COMPLETED_FOLDER
+	cd $DOWNLOAD_COMPLETED_FOLDER/torrents_complete/
         MOVE_OR_COPY_ARGS=-uv
         MOVE_OR_COPY_ARGS_DIR=-uvr
 	MOVE_OR_COPY_COMMAND=cp
@@ -47,10 +47,10 @@ declare -a dest=("New girl/"
     "Greys anatomy/"
 	"rizzoli & Isles/"
 	"south park/"
-	"Modern Family/"
+	"Modern family/"
 	"the daily show/"
     "qi/"
-	"the walking dead/"
+	"The Walking dead/"
         "chicago Fire/"
         "chicago med/"
         "chicago pd/"
